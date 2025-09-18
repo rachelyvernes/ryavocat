@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css', '~/assets/css/components.css'], 
   
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
   postcss: {
     plugins: {
       'tailwindcss/nesting': {},

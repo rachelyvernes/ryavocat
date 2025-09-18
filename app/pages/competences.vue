@@ -2,7 +2,7 @@
   <div class="Competences page">
     <div class="content">
       <ul>
-        <li aria-open="false" class="group pb-3 md:pb-4 xl: pb-5 mb-3 md:mb-4 xl:mb-5 border-b-[2px] border-white/60">
+        <li aria-open="false" class="group pb-4 xl:pb-5 mb-4 xl:mb-5 border-b-[2px] border-white/60">
           <h2 class="-h2 cursor-pointer select-none" @click="toggleList">
             Droit des contrats publics et privés associés
             <span></span>
@@ -23,7 +23,7 @@
             </div>
           </div>
         </li>
-        <li aria-open="false" class="group pb-3 md:pb-4 xl:pb-5 mb-3 md:mb-4 xl:mb-5 border-b-[2px] border-white/60">
+        <li aria-open="false" class="group pb-4 xl:pb-5 mb-4 xl:mb-5 border-b-[2px] border-white/60">
           <h2 class="-h2 cursor-pointer select-none" @click="toggleList">
             Droit administratif général
             <span></span>
@@ -73,6 +73,5 @@
 function toggleList(e) {
   const button = e.currentTarget
   button.parentElement.setAttribute('aria-open', button.parentElement.getAttribute('aria-open') === 'false')
-  console.log('fsd')
 }
 </script>

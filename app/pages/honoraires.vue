@@ -1,7 +1,7 @@
 <template>
   <div class="Honoraires page">
     <div class="content">
-      <div class="grid grid-cols-2 gap-[70px] mb-20">
+      <div class="grid md:grid-cols-2 gap-10 lg:gap-[70px] mb-20">
         <div class="p-[30px] border-[2px] border-blanc rounded-[4px]">
           <h2 class="-h3 mb-5">
             Modalités de fixation des honoraires

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[114px]" :class="`page-${(route.name === 'publications-publication')?'publications':route.name}`">
+  <div class="pt-[84px] xl:pt-[114px]" :class="`page-${(route.name === 'publications-publication')?'publications':route.name}`">
     <Header />
     <NuxtPage />
     <Footer />
