@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/sanity'
+  ],
   css: ['~/assets/css/main.css', '~/assets/css/components.css'], 
   
   app: {
@@ -13,6 +18,19 @@ export default defineNuxtConfig({
         lang: 'fr',
       },
     }
+  },
+
+  sanity: {
+    projectId: 'wx61n1tpd96fpixftuq5wq6s',
+    dataset: 'production'
+  },
+
+  pinia: {
+    storesDirs: ['./app/stores/**'],
+  },
+
+  imports: {
+    dirs: ['./app/stores/**']
   },
 
   postcss: {

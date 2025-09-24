@@ -14,7 +14,7 @@
       <ul>
         <li>
           <NuxtLink to="/cabinet" @click="closeMenu">
-            Cabinet
+            Le cabinet
           </NuxtLink>
         </li>
         <li>

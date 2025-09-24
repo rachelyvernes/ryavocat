@@ -65,6 +65,9 @@
               </p>
             </div>
           </div>
+          <p class="mt-8">
+            Cette somme sera déduite des honoraires si le rendez-vous est suivi d’une ouverture du dossier 
+          </p>
         </div>
       </div>
     </div>
