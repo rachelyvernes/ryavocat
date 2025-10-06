@@ -2,14 +2,12 @@
   <div>
     <HeaderComponent />
     <main class="min-h-screen relative overflow-hidden">
-      <canvas gradient fade class="absolute top-1/2 -z-10 -translate-y-1/2 inset-0 w-full h-[100vw] opacity-80"></canvas>
       <h1 class="text-center">
         404
       </h1>
       <p class="error-message -h3 text-center uppercase opacity-0">
         La page que vous cherchez <br> est introuvable.
       </p>
-      <img class="absolute bottom-0 right-1/2 translate-x-1/2 w-[300px]" src="~assets/img/equipe.png" alt="">
     </main>
     <FooterComponent />
   </div>
@@ -41,14 +39,4 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-h1{
-  margin-bottom: 20px;
-  padding-top: 16px;
-  @media (max-width: 680px) {
-    padding-top: 10vh;
-  }
-}
-  canvas {
-    height: 100vw;
-  }
 </style>
