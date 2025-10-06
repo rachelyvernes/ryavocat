@@ -2,6 +2,12 @@ import glsl from 'vite-plugin-glsl'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false
+    }
+  },
+
   devServer: {
     host: '0.0.0.0'
   },
