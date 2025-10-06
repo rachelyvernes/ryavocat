@@ -8,16 +8,6 @@ export default defineType({
   icon,
   fields: [
     defineField({
-      title: 'Phrase d\'accroche',
-      name: 'catchphrase',
-      type: 'string'
-    }),
-    defineField({
-      name: 'link',
-      title: 'Lien',
-      type: 'link',
-    }),
-    defineField({
       title: 'Blocs',
       name: 'blocs',
       type: 'array',
@@ -31,6 +21,16 @@ export default defineType({
           ]
         }
       ],
+    }),
+    defineField({
+      name: 'link',
+      title: 'Lien',
+      type: 'link',
+    }),
+    defineField({
+      title: 'Informations supplémentaires',
+      name: 'info',
+      type: 'string'
     }),
   ],
 })

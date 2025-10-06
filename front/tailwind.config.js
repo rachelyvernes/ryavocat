@@ -1,23 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: {
-    "files": [
-      // all directories and extensions will correspond to your Nuxt config
-      "{srcDir}/components/**/*.{vue,js,jsx,mjs,ts,tsx}",
-      "{srcDir}/layouts/**/*.{vue,js,jsx,mjs,ts,tsx}",
-      "{srcDir}/pages/**/*.{vue,js,jsx,mjs,ts,tsx}",
-      "{srcDir}/plugins/**/*.{js,ts,mjs}",
-      "{srcDir}/composables/**/*.{js,ts,mjs}",
-      "{srcDir}/utils/**/*.{js,ts,mjs}",
-      "{srcDir}/{A,a}pp.{vue,js,jsx,mjs,ts,tsx}",
-      "{srcDir}/{E,e}rror.{vue,js,jsx,mjs,ts,tsx}",
-      "{srcDir}/app.config.{js,ts,mjs}",
-      "{srcDir}/app/spa-loading-template.html"
-    ]
-  },
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+  ],
   theme: {
     screens: {
-      'xs': '360px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -26,7 +17,7 @@ export default {
     },
     extend: {
       transitionTimingFunction: {
-        'pam': 'cubic-bezier(0.25,0, 0, 1)' 
+        'pam': 'cubic-bezier(0.25,0, 0, 1)'
       },
       colors: {
         'bleu': '#14254C',
@@ -37,6 +28,7 @@ export default {
       gothic: ['Gothic A1', 'sans-serif'],
       source: ['Source Serif Pro', 'serif'],
       alice: ['Alice', 'serif'],
+
     }
   },
   plugins: [],

@@ -26,6 +26,17 @@ export default defineType({
       title: 'Contenu',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'cover',
+      title: 'Image de couverture',
+      type: 'image',
+    }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
+    }),
   ],
   preview: {
     select: {

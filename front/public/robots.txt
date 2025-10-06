@@ -1,2 +1,4 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Disallow: 
+
+Sitemap: https://idoko.co/sitemap_index.xml

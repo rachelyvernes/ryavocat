@@ -1,38 +1,34 @@
+import glsl from 'vite-plugin-glsl'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  modules: [
-    '@pinia/nuxt',
-    '@nuxt/image',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/sanity'
-  ],
-  css: ['~/assets/css/main.css', '~/assets/css/components.css'], 
-  
+  devServer: {
+    host: '0.0.0.0'
+  },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'Rachel Yvernes', // default fallback title
-      htmlAttrs: {
-        lang: 'fr',
-      },
-    }
+      title: 'Rachel',
+      link: []
+    },
   },
-
+  modules: ['@nuxtjs/sanity', '@pinia/nuxt', '@nuxtjs/i18n', 'nuxt-simple-sitemap'],
+ 
   sanity: {
-    projectId: 'wx61n1tpd96fpixftuq5wq6s',
-    dataset: 'production'
+    projectId: '5u5dp5q6',
+    dataset: 'production',
+    useCdn: true,
+    additionalClients: {
+      preview: {
+        useCdn: false,
+        withCredentials: true
+      },
+    },
   },
-
-  pinia: {
-    storesDirs: ['./app/stores/**'],
-  },
-
+  
   imports: {
-    dirs: ['./app/stores/**']
+    dirs: ['stores'],
   },
-
+  css: ['~/assets/css/main.css', '~/assets/css/components.css'],
   postcss: {
     plugins: {
       'tailwindcss/nesting': {},
@@ -41,4 +37,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+	vite: {
+		plugins: [glsl()],
+	}
 })
