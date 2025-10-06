@@ -4,8 +4,6 @@ import { CustomEase } from 'gsap/CustomEase'
 import { SplitText } from 'gsap/SplitText'
 import { Observer } from 'gsap/Observer'
 import Lenis from '@studio-freight/lenis'
-import Gradient from '~/assets/js/Gradient'
-import Pyramid from '~/assets/js/Pyramid'
 
 ScrollTrigger.config({ ignoreMobileResize: true })
 gsap.registerPlugin(ScrollTrigger, CustomEase, SplitText, Observer)
@@ -57,13 +55,6 @@ function raf2(time) {
 
 initScroll()
 
-function initGradient(options) {
-  const gradient = new Gradient(options)
-  return gradient
-}
-function initPyramid(options) {
-  return new Pyramid(options)
-}
 
 function stKill() {
   let allTriggers = ScrollTrigger.getAll()
@@ -147,8 +138,6 @@ export default defineNuxtPlugin(nuxtApp => {
         initScrollInstance,
         destroyScrollInstance,
         getLenis,
-        initGradient,
-        initPyramid,
         stKill,
         pamEase,
         initPage,
