@@ -1,6 +1,6 @@
 <template>
   <div class="cabinet">
-    <div class="content">
+    <div v-if="data" class="content">
       <h1 class="-h1 mt-20 mb-[100px] text-center lowercase leading-[0.9]">
         {{ data.catchphrase }}
       </h1>

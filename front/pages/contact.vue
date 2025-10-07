@@ -1,6 +1,6 @@
 <template>
   <div class="Contact page">
-    <div class="content">
+    <div v-if="data" class="content">
       <div class="grid md:grid-cols-2 gap-10 xl:gap-[70px]">
         <div>
           <p class="-h4 mb-8">

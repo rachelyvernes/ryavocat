@@ -1,6 +1,6 @@
 <template>
   <div class="Competences page">
-    <div class="content">
+    <div v-if="data" class="content">
       <ul>
         <li v-for="(competence, index) in data.competences" aria-open="false" class="group pb-4 xl:pb-5 mb-4 xl:mb-5 border-b-[2px] border-white/60">
           <h2 class="-h2 cursor-pointer select-none" @click="toggleList">

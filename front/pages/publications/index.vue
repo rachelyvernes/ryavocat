@@ -1,6 +1,6 @@
 <template>
   <div class="Publications page">
-    <div class="content grid xl:grid-cols-[300px_1fr] gap-6">
+    <div v-if="data" class="content grid xl:grid-cols-[300px_1fr] gap-6">
       <div class="flex flex-wrap gap-1.5 content-start">
         <button aria-active="true" class="border border-bleu px-3 pt-1 pb-0.5 rounded-lg aria-[active=false]:opacity-60">
           Tout

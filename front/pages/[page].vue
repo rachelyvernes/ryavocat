@@ -1,6 +1,6 @@
 <template>
   <div class="Publication page">
-    <div class="content -sm">
+    <div v-if="data" class="content -sm">
       <h1 class="text-[16px] uppercase">
         {{data.title}}
       </h1>
