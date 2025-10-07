@@ -1,5 +1,17 @@
 <template>
   <div class="Competences page">
+    <Head v-if="data">
+      <Title v-if="data.title">{{ data.title }}</Title>
+      <Meta v-if="data.title" name="og:title" :content="data.title"/>
+      <Meta v-if="data.title" name="twitter:title" :content="data.title"/>
+      <Meta v-if="data.description" name="description" :content="data.description"/>
+      <Meta v-if="data.description_og" property="og:description" :content="data.description_og"/>
+      <Meta v-else-if="data.description" property="og:description" :content="data.description"/>
+      <Meta v-if="data.description_og" property="twitter:description" :content="data.description_og"/>
+      <Meta v-else-if="data.description" property="twitter:description" :content="data.descriptiong"/>
+      <Meta v-if="data.ogImage" property="og:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
+      <Meta v-if="data.ogImage" property="twitter:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
+    </Head>
     <div v-if="data" class="content">
       <ul>
         <li v-for="(competence, index) in data.competences" aria-open="false" class="group pb-4 xl:pb-5 mb-4 xl:mb-5 border-b-[2px] border-white/60">

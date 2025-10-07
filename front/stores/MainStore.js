@@ -5,7 +5,6 @@ export const useMainStore = defineStore('MainStore', {
     return {
 			siteOptions: {},
       previewIsActive: false,
-      locale: 'fr',
 			slugs: {},
     }
   },
@@ -16,19 +15,13 @@ export const useMainStore = defineStore('MainStore', {
         this.locale = 'en'
       }
       const { data } = await useSanityQuery(groq`{
-        "siteOptions": *[_type == "siteOptions" && language == "${this.locale}"] [0],
-        "slugs": {
-          "pages": {
-            "fr": *[_type == "page" && language == "fr"].slug.current,
-            "en": *[_type == "page" && language == "en"].slug.current
-          }
-        }
+        "siteOptions": *[_type == "siteOptions"] [0]
       }`)
       this.siteOptions = data.value.siteOptions
 			this.slugs = data.value.slugs
     },
     refreshSiteContent() {
-      const { data } = useSanity(groq`*[_type == "siteOptions" && language == "${this.locale}"][0]`)
+      const { data } = useSanity(groq`*[_type == "siteOptions"][0]`)
       this.siteOptions = data.value
     },
   },

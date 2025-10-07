@@ -1,5 +1,17 @@
 <template>
   <div ref="rootEl" class="relative overflow-hidden">
+    <Head v-if="data">
+      <Title v-if="data.title">{{ data.title }}</Title>
+      <Meta v-if="data.title" name="og:title" :content="data.title"/>
+      <Meta v-if="data.title" name="twitter:title" :content="data.title"/>
+      <Meta v-if="data.description" name="description" :content="data.description"/>
+      <Meta v-if="data.description_og" property="og:description" :content="data.description_og"/>
+      <Meta v-else-if="data.description" property="og:description" :content="data.description"/>
+      <Meta v-if="data.description_og" property="twitter:description" :content="data.description_og"/>
+      <Meta v-else-if="data.description" property="twitter:description" :content="data.descriptiong"/>
+      <Meta v-if="data.ogImage" property="og:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
+      <Meta v-if="data.ogImage" property="twitter:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
+    </Head>
     <template v-if="data">
       <div class="grid content-end py-[15vh] h-[calc(100dvh_-_84px)] xl:h-[calc(100vh_-_114px)]">
         <div class="z-10 text-center px-5">

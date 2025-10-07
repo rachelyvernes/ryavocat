@@ -14,7 +14,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Rachel',
-      link: []
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+      ]
     },
   },
   modules: ['@nuxtjs/sanity', '@pinia/nuxt', '@nuxtjs/i18n', 'nuxt-simple-sitemap'],

@@ -246,6 +246,10 @@ header {
       font-size: 24px;
     }
   }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
   ul {
     font-family: 'Alice';
     @media (max-width: 1023px) {
@@ -264,6 +268,8 @@ header {
       position: relative;
       gap: 12px;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
     @media (min-width: 1280px) {
       gap: 24px;

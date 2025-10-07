@@ -10,45 +10,44 @@
         <div class="">
           <div class="grid gap-[10px] text-center md:text-left md:w-[260px] text-[14px] font-bold">
             <p>
-              141, avenue de Wagram <br>
-              75017 Paris
+              {{ mainStore.siteOptions?.adresse }}
             </p>
             <p>
-              Le cabinet est situé à Paris mais intervient partout en France.
+              {{ mainStore.siteOptions?.infos }}
             </p>
             <p>
-              <a href="mailto:rachel.yvernes@ryavocat.fr">rachel.yvernes@ryavocat.fr</a>
+              <a :href="'mailto:' + mainStore.siteOptions?.mail">{{ mainStore.siteOptions?.mail }}</a>
             </p>
             <p>
-              <a href="tel:+33633226918">+33 6 33 22 69 18</a>
+              <a :href="'tel:' + mainStore.siteOptions?.tel.replace(/\s+/g, '')">{{mainStore.siteOptions?.tel}}</a>
             </p>
           </div>
         </div>
-        <div class="j text-center md:text-left">
+        <div class="j text-center md:text-right">
           <nav>
-            <ul class="grid gap-[10px] text-[16px] font-bold">
+            <ul class="grid md:justify-end gap-[10px] text-[16px] font-bold">
               <li>
-                <NuxtLink to="/" >
+                <NuxtLink to="/cabinet" >
                   Cabinet
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/" >
+                <NuxtLink to="/competences" >
                   Compétences
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/" >
+                <NuxtLink to="/honoraire" >
                   Honoraires et devis
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/" >
+                <NuxtLink to="/publications" >
                   Publications
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/" >
+                <NuxtLink to="/contact" >
                   Me contacter
                 </NuxtLink>
               </li>
@@ -57,13 +56,13 @@
         </div>
         <div class="flex md:grid grid-cols-2 md:col-span-2 gap-5 md:gap-0 justify-between">
           <div class="flex gap-[10px]">
-            <a href="" target="_blank">
+            <a v-if="mainStore.siteOptions && mainStore.siteOptions.linkedin" :href="mainStore.siteOptions.linkedin" target="_blank">
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27.2654 27.266H22.524V19.8406C22.524 18.07 22.4924 15.7906 20.058 15.7906C17.5885 15.7906 17.2106 17.7198 17.2106 19.7117V27.2655H12.4694V11.996H17.021V14.0827H17.0848C17.5403 13.3038 18.1985 12.6631 18.9894 12.2287C19.7802 11.7944 20.6741 11.5826 21.5758 11.6161C26.3814 11.6161 27.2674 14.7771 27.2674 18.8893L27.2654 27.266ZM7.11938 9.90883C5.59975 9.90908 4.36763 8.67733 4.36738 7.1577C4.36713 5.63808 5.59875 4.40595 7.11838 4.4057C8.638 4.40533 9.87013 5.63708 9.87038 7.1567C9.87051 7.88646 9.58075 8.58638 9.06484 9.1025C8.54893 9.61862 7.84913 9.90866 7.11938 9.90883ZM9.49013 27.2661H4.74375V11.996H9.49V27.266L9.49013 27.2661ZM29.6291 0.00232899H2.36125C1.0725 -0.012171 0.0156279 1.0202 -0.00012207 2.30895V29.6906C0.0151279 30.98 1.07188 32.0133 2.36113 31.9998H29.6291C30.9211 32.0158 31.982 30.9825 31.9999 29.6906V2.30683C31.9815 1.01558 30.9205 -0.016671 29.6291 0.000203987" fill="#0A66C2"/>
               </svg>
 
             </a>
-            <a href="" target="_blank">
+            <a v-if="mainStore.siteOptions && mainStore.siteOptions.google" :href="mainStore.siteOptions.google" target="_blank">
               <!-- <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.9" d="M22.9891 12.2245C22.9891 11.2413 22.9108 10.5238 22.7415 9.77966H11.7291V14.2176H18.1931C18.0628 15.3205 17.3591 16.9815 15.7952 18.0976L15.7733 18.2462L19.2552 20.9964L19.4964 21.0209C21.7118 18.9347 22.9891 15.8653 22.9891 12.2245Z" fill="#1A2D59"/>
                 <path d="M11.7291 23.9176C14.8959 23.9176 17.5545 22.8545 19.4964 21.0209L15.7952 18.0976C14.8047 18.8018 13.4754 19.2934 11.7291 19.2934C8.62745 19.2934 5.99494 17.2074 5.05652 14.324L4.91897 14.3359L1.29845 17.1927L1.2511 17.3269C3.17986 21.2334 7.1417 23.9176 11.7291 23.9176Z" fill="#1A2D59"/>
@@ -78,7 +77,7 @@
               </svg>
             </a>
           </div>
-          <div class="flex gap-[60px]">
+          <div class="flex justify-end gap-[60px]">
             <span class="opacity-60">©2025</span>
             <NuxtLink to="/" class="opacity-60">Mentions légales</NuxtLink>
           </div>
@@ -87,3 +86,7 @@
     </div>
   </footer>
 </template>
+<script setup>
+const mainStore = useMainStore()
+
+</script>
