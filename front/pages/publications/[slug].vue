@@ -17,7 +17,7 @@
         {{data.title}}
       </h1>
       <img class="w-full mt-8 object-cover object-center" :src="$urlFor(data.cover).width(1200).url()" :alt="data.title" loading="lazy">
-      <div class="wysig whitespace-pre-line mt-8">
+      <div class="block whitespace-pre-line mt-8">
         <SanityContent :blocks="data.contenu" />
       </div>
     </div>

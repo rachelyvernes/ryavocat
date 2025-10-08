@@ -6,6 +6,7 @@ export default {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./app.vue",
+    "./error.vue",
   ],
   theme: {
     screens: {
@@ -26,7 +27,7 @@ export default {
     },
     fontFamily: {
       gothic: ['Gothic A1', 'sans-serif'],
-      source: ['Source Serif Pro', 'serif'],
+      source: ['Source', 'serif'],
       alice: ['Alice', 'serif'],
 
     }

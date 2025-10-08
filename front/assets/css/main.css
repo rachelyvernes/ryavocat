@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
     font-family: 'Alice';
     src: url('../fonts/Alice-Regular.woff2') format('woff2'),
         url('../fonts/Alice-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'Gothic A1';
@@ -37,6 +37,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Source';
+    src: url('../fonts/SourceSerifPro-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSerifPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* @font-face {
     font-family: 'Gothic A1';
@@ -70,7 +80,7 @@ body {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.25;
-  font-family: 'Alice';
+  font-family: 'Source';
   @media (min-width: 1024px) {
     font-size: 20px;
   }
@@ -133,7 +143,7 @@ p, ul {
   font-family: 'Gothic A1';
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Alice';
+  font-family: 'Source';
 }
 .-h1 {
   font-size: 80px;
@@ -152,9 +162,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h2, .-h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 110%;
+  @media (min-width: 640px) {
+    font-size: 28px;
+  }
   @media (min-width: 768px) {
     font-size: 32px;
   }
@@ -221,13 +234,21 @@ h4, .-h4 {
   max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 1280px;
+    padding: 0 40px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1320px;
+    padding: 0 60px;
+  }
   &.-sm {
   max-width: 960px;
   }
 }
 header {
   padding: 20px;
-  font-family: 'Alice';
+  font-family: 'Source';
   font-size: 20px;
   text-transform: uppercase;
   position: relative;
@@ -251,7 +272,7 @@ header {
     justify-content: space-between;
   }
   ul {
-    font-family: 'Alice';
+    font-family: 'Source';
     @media (max-width: 1023px) {
       position: absolute;
       top: 0;
@@ -270,9 +291,6 @@ header {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-    }
-    @media (min-width: 1280px) {
-      gap: 24px;
     }
     li{
       @media (max-width: 1023px) {
@@ -392,7 +410,10 @@ footer {
   }
   ul ul{
     list-style: square;
-    padding-left: 20px;
+    padding-left: 40px;
+    @media (min-width: 1024px) {
+      padding-left: 50px;
+    }
     @media (min-width: 1280px) {
       padding-left: 60px;
     }
@@ -409,21 +430,6 @@ footer {
   padding-left: 2rem;
   li{
     padding-left: 0.25rem;
-  }
-}
-.wysig {
-  white-space: pre-line;
-  ul{
-    list-style: square;
-    padding-left: 2rem;
-    li{
-      padding-left: 0.25rem;
-    }
-  }
-  p{
-    &:empty{
-      height: 30px;
-    }
   }
 }
 form {
@@ -457,10 +463,27 @@ form {
   }
 }
 .block {
+  white-space: pre-line;
+  ul{
+    list-style: square;
+    padding-left: 2rem;
+    li{
+      padding-left: 0.25rem;
+    }
+  }
+  p{
+    &:empty{
+      height: 30px;
+    }
+  }
   p, ul {
+    text-align: justify;
     &:not(:first-child) {
       margin-top: 20px;
     }
+  }
+  h2, h3, h4, h5 {
+    text-align: center;
   }
   h2 {
     &:not(:first-child) {

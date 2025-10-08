@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <HeaderComponent />
-    <main class="min-h-screen relative overflow-hidden">
-      <h1 class="text-center">
+  <div class="grid place-items-center h-screen bg-bleu color-blanc">
+    <main>
+      <h1 class="text-center font-source">
         404
       </h1>
-      <p class="error-message -h3 text-center uppercase opacity-0">
+      <p class=" text-center uppercase font-source">
         La page que vous cherchez <br> est introuvable.
       </p>
     </main>
@@ -30,10 +29,8 @@ onMounted(() => {
       $gsap.to('.error-message', {opacity: 1, duration: 0.6})
     }
   }, 100)
-  gradient = $initGradient({ container: document.querySelector('main'), color1: '#FFFF7F', color2: '#97F1FD', zoom: 2, rotation: -Math.PI/7, width: 0.4})
 })
 onBeforeUnmount(() => {
-  gradient.kill()
 })
 
 </script>

@@ -18,14 +18,14 @@
           <h2 class="-h3 mb-5">
             {{ bloc.title }}
           </h2>
-          <div class="wysig">
+          <div class="block">
             <SanityContent :blocks="bloc.contenu" />
           </div>
         </div>
       </div>
       <div class="text-center pb-[60px]">
         <ButtonComponent class="-btn mb-10" v-if="data.link" :link="data.link.lien" :text="data.link.title" :is_intern="data.link.is_intern" />
-        <p>
+        <p class="text-center">
           {{data.info}}
         </p>
       </div>

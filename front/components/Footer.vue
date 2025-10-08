@@ -25,7 +25,7 @@
         </div>
         <div class="j text-center md:text-right">
           <nav>
-            <ul class="grid md:justify-end gap-[10px] text-[16px] font-bold">
+            <ul class="grid md:justify-end gap-[10px] text-[14px] font-bold">
               <li>
                 <NuxtLink to="/cabinet" >
                   Cabinet

@@ -2,7 +2,7 @@
   display: inline-block;
   background: var(--blanc);
   color: var(--bleu);
-  padding: 14px 28px 12px;
+  padding: 14px 28px 14px;
   border-radius: 10px;
   border: 2px solid var(--blanc);
   font-family: 'Alice';
