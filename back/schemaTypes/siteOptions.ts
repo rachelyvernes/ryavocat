@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import {MdBook  as icon} from 'react-icons/md'
+import {MdExtension as icon} from 'react-icons/md'
 
 export default defineType({
   name: 'siteOptions',

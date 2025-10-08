@@ -4,6 +4,7 @@ import competences from './competences'
 import honoraires from './honoraires'
 import publication from './publication'
 import contact from './contact'
+import tags from './tags'
 import link from './objects/link'
 import blockContent from './objects/blockContent'
 import siteOptions from './siteOptions'
@@ -20,6 +21,7 @@ export const schemaTypes = [
   siteOptions,
 
   // Other types
+  tags,
   blockContent,
   link,
 ]

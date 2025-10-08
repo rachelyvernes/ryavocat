@@ -34,6 +34,20 @@ export default defineType({
       group: 'page',
     }),
     defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'tag' }],
+          options: {
+            disableNew: false, // autorise la création d’un nouveau tag à la volée
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'contenu',
       title: 'Contenu',
       type: 'blockContent',

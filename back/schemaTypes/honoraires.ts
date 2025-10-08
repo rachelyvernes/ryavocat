@@ -72,4 +72,11 @@ export default defineType({
       group: 'seo'
     })
   ],
+  preview: {
+    prepare({}) {
+      return {
+        title: 'Honoraires',
+      }
+    },
+  },
 })
