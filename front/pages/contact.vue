@@ -18,21 +18,34 @@
           <p class="-h4 mb-8">
             {{data.texte_formulaire}}
           </p>
-          <form class="grid sm:grid-cols-2 gap-2.5">
-            <input class="sm:col-span-2" type="text" placeholder="Nom et prénom">
-            <input class="sm:col-span-2" type="text" placeholder="Votre entreprise">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Téléphone">
-            <select class="sm:col-span-2" name="motif">
-              <option value="" selected disabled>Motif du contact</option>
-              <option v-for="(motif, index) in data.motifs" :value="toOptionValue(motif)">{{motif}}</option>
-            </select>
-            <textarea class="sm:col-span-2" name="" id="" placeholder="Votre message"></textarea>
-            <div>
-              <button>
-                Envoyer
-              </button>
-            </div>
+          <form @submit.prevent="onSubmit" class="grid sm:grid-cols-2 gap-2.5">
+            <template v-if="loading">Envoi…</template>
+            <template v-else-if="success">Message envoyé ✅</template>
+            <template v-else>
+              <input class="sm:col-span-2" type="text" placeholder="Nom et prénom">
+              <input class="sm:col-span-2" type="text" placeholder="Votre entreprise">
+              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Téléphone">
+              <select class="sm:col-span-2" name="motif">
+                <option value="" selected disabled>Motif du contact</option>
+                <option v-for="(motif, index) in data.motifs" :value="toOptionValue(motif)">{{motif}}</option>
+              </select>
+              <textarea class="sm:col-span-2" name="" id="" placeholder="Votre message"></textarea>
+              <!-- 🐝 Champ honeypot invisible -->
+              <input
+                v-model="form.honey"
+                type="text"
+                name="website"
+                autocomplete="off"
+                tabindex="-1"
+                style="position:absolute; left:-9999px; opacity:0;"
+              >
+              <div>
+                <button class="bg-blanc" type="submit">
+                  Envoyer
+                </button>
+              </div>
+            </template>
           </form>
         </div>
         <div>
@@ -73,6 +86,63 @@ function toOptionValue(text) {
     .replace(/[^a-z0-9_-]/g, '-')    // Remplace tout caractère non autorisé par un tiret
     .replace(/-+/g, '-')             // Évite les doubles tirets
     .replace(/^-|-$/g, '');          // Enlève les tirets au début/fin
+}
+// async function sendForm() {
+//   const response = await fetch('/.netlify/functions/send-email', { method: 'POST', body: JSON.stringify(formData) })
+// }
+
+const form = ref({
+  nom: '',
+  entreprise: '',
+  email: '',
+  telephone: '',
+  motif: '',
+  message: '',
+  honey: '' // champ piège invisible 🐝
+})
+
+
+const loading = ref(false)
+const success = ref(false)
+const error = ref(null)
+
+const formStartTime = ref(0)
+
+onMounted(() => {
+  // mémorise l'heure d'ouverture du formulaire
+  formStartTime.value = Date.now()
+})
+
+const onSubmit = async () => {
+  loading.value = true
+  success.value = false
+  error.value = null
+
+  const elapsed = (Date.now() - formStartTime.value) / 1000
+
+  // 🐝 Vérif front avant même l'appel serveur
+  if (form.value.honey !== '' || elapsed < 2) {
+    error.value = 'Suspicion de spam détectée.'
+    loading.value = false
+    return
+  }
+
+  try {
+    const response = await $fetch('/.netlify/functions/send-email', {
+      method: 'POST',
+      body: form.value
+    })
+
+    if (response.success) {
+      success.value = true
+    } else {
+      throw new Error(response.error || 'Erreur inconnue')
+    }
+  } catch (err) {
+    error.value = err.message
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
