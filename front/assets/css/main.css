@@ -471,15 +471,10 @@ form {
       padding-left: 0.25rem;
     }
   }
-  p{
-    &:empty{
-      height: 30px;
-    }
-  }
   p, ul {
     text-align: justify;
     &:not(:first-child) {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
   h2, h3, h4, h5 {
