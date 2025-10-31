@@ -3,6 +3,7 @@ import cabinet from './cabinet'
 import competences from './competences'
 import honoraires from './honoraires'
 import publication from './publication'
+import page from './page'
 import contact from './contact'
 import tags from './tags'
 import link from './objects/link'
@@ -17,6 +18,7 @@ export const schemaTypes = [
   competences,
   honoraires,
   publication,
+  page,
   contact,
   siteOptions,
 

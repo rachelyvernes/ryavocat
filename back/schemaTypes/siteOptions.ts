@@ -59,6 +59,14 @@ export default defineType({
       type: 'string',
       group: 'page',
     }),
+    
+    defineField({
+      title: 'Liens légaux',
+      name: 'liens_legaux',
+      type: 'array',
+      of: [{type: 'link'}],
+      group: 'page',
+    }),
 
 
     /* seo */

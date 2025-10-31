@@ -16,9 +16,8 @@
       <h1 class="text-[16px] uppercase">
         {{data.title}}
       </h1>
-      <img class="w-full mt-8 object-cover object-center" :src="$urlFor(data.cover).width(1200).url()" :alt="data.title" loading="lazy">
-      <div class="block mt-8">
-        <SanityContent :blocks="data.content" />
+      <div class="block whitespace-pre-line mt-8">
+        <SanityContent :blocks="data.contenu" />
       </div>
     </div>
   </div>

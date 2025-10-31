@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink v-if="is_intern" :to="link" class="btn -cta" :class="{'-light': light == 'true'}" :target="is_intern? '_self' : '_blank'">
+  <NuxtLink :to="link" class="btn -cta" :class="{'-light': light == 'true'}" :target="is_intern? '_self' : '_blank'">
     {{ text }}
   </NuxtLink>
 </template>

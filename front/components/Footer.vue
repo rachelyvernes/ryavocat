@@ -77,9 +77,11 @@
               </svg>
             </a>
           </div>
-          <div class="flex justify-end gap-[60px]">
-            <span class="opacity-60">©2025</span>
-            <NuxtLink to="/" class="opacity-60">Mentions légales</NuxtLink>
+          <div class="flex justify-end gap-2 md:gap-20">
+            <span class="opacity-60">©{{ currentYear }}</span>
+            <template v-if="mainStore.siteOptions">
+              <NuxtLink v-for="(link, index) in mainStore.siteOptions.liens_legaux" :to="link.lien" class="opacity-60"  :target="link.is_intern? '_self' : '_blank'">{{link.title}}</NuxtLink>
+            </template>
           </div>
         </div>
       </div>
@@ -88,5 +90,5 @@
 </template>
 <script setup>
 const mainStore = useMainStore()
-
+const currentYear = new Date().getFullYear();
 </script>

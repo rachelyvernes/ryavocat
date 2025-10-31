@@ -162,15 +162,9 @@ h1, h2, h3, h4, h5 {
 }
 
 h2, .-h2 {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
   line-height: 110%;
-  @media (min-width: 640px) {
-    font-size: 28px;
-  }
-  @media (min-width: 768px) {
-    font-size: 32px;
-  }
   @media (min-width: 1024px) {
     font-size: 40px;
   }
@@ -183,9 +177,6 @@ h3, .-h3 {
   font-size: 30px;
   font-weight: 400;
   line-height: 120%;
-  @media (min-width: 768px) {
-    font-size: 35px;
-  }
   @media (min-width: 1024px) {
     font-size: 38px;
   }

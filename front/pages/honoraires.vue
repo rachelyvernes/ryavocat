@@ -15,7 +15,7 @@
     <div v-if="data" class="content">
       <div class="grid md:grid-cols-2 gap-10 lg:gap-[70px] mb-20">
         <div v-for="(bloc, index) in data.blocs" class="p-[15px] md:p-[30px] border-[2px] border-blanc rounded-[4px]">
-          <h2 class="-h3 mb-5">
+          <h2 class="-h3 mb-5 text-center">
             {{ bloc.title }}
           </h2>
           <div class="block">

@@ -24,7 +24,7 @@
           </p>
           <ButtonComponent class="-btn" v-if="data.link" :link="data.link.lien" :text="data.link.title" :is_intern="data.link.is_intern" />
         </div>
-        <img class="absolute bottom-0 left-1/2 -z-1 -translate-x-1/2 aspect-square max-w-none h-[100%] object-contain object-bottom" :src="$urlFor(data.background).width(1200).url()" :alt="data.title" loading="lazy">
+        <img v-if="data.background" class="absolute bottom-0 left-1/2 -z-1 -translate-x-1/2 aspect-square max-w-none h-[100%] object-contain object-bottom" :src="$urlFor(data.background).width(1200).url()" :alt="data.title" loading="lazy">
       </div>
       <div class="-h2 flex flex-wrap justify-center gap-3 py-4 md:py-8 border-b-2 border-bleu/60 border-dashed bg-blanc text-bleu lowercase">
         <div>

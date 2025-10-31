@@ -65,6 +65,9 @@ export default defineConfig({
              S.documentTypeListItem('publication').title(
                 'Publications',
               ),
+             S.documentTypeListItem('page').title(
+                'Pages',
+              ),
             S.divider(),
             S.listItem()
               .id('siteOptions')
