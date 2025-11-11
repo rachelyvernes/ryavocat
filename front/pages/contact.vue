@@ -13,40 +13,38 @@
       <Meta v-if="data.ogImage" property="twitter:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
     </Head>
     <div v-if="data" class="content">
-      <div class="grid md:grid-cols-2 gap-10 xl:gap-[70px]">
-        <div>
+      <div class="md:grid md:grid-cols-2 gap-10 xl:gap-[70px]">
+        <div class="mb-10 md:mb-0">
           <p class="-h4 mb-8">
             {{data.texte_formulaire}}
           </p>
-          <form @submit.prevent="onSubmit" class="grid sm:grid-cols-2 gap-2.5">
-            <template v-if="loading">Envoi…</template>
-            <template v-else-if="success">Message envoyé ✅</template>
-            <template v-else>
-              <input class="sm:col-span-2" type="text" placeholder="Nom et prénom">
-              <input class="sm:col-span-2" type="text" placeholder="Votre entreprise">
-              <input type="text" placeholder="Email">
-              <input type="text" placeholder="Téléphone">
-              <select class="sm:col-span-2" name="motif">
-                <option value="" selected disabled>Motif du contact</option>
-                <option v-for="(motif, index) in data.motifs" :value="toOptionValue(motif)">{{motif}}</option>
-              </select>
-              <textarea class="sm:col-span-2" name="" id="" placeholder="Votre message"></textarea>
-              <!-- 🐝 Champ honeypot invisible -->
-              <input
-                v-model="form.honey"
-                type="text"
-                name="website"
-                autocomplete="off"
-                tabindex="-1"
-                style="position:absolute; left:-9999px; opacity:0;"
-              >
-              <div>
-                <button class="bg-blanc" type="submit">
-                  Envoyer
-                </button>
-              </div>
-            </template>
+          <form class="grid sm:grid-cols-2 gap-2.5" @submit.prevent="sendForm">
+            <input class="sm:col-span-2" type="text" v-model="form.nom" placeholder="Nom et prénom *">
+            <input class="sm:col-span-2" type="text" v-model="form.entreprise" placeholder="Votre entreprise">
+            <input type="email" v-model="form.email" placeholder="Email *">
+            <input type="text" v-model="form.telephone" placeholder="Téléphone">
+            <select class="sm:col-span-2" v-model="form.motif">
+              <option value="" disabled selected>Motif du contact</option>
+              <option value="demande-devis">Demande de devis</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="support-technique">Support technique</option>
+              <option value="autre">Autre</option>
+            </select>
+            <textarea class="sm:col-span-2" v-model="form.message" placeholder="Votre message *"></textarea>
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" v-model="form.website" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="sm:col-span-2 flex items-center gap-3">
+              <button class="bg-blanc" type="submit" :disabled="isSending">
+                {{ isSending ? 'Envoi en cours...' : 'Envoyer' }}
+              </button>
+
+              <span v-if="successMessage" class="text-green-600 text-sm">{{ successMessage }}</span>
+              <span v-if="errorMessage" class="text-red-600 text-sm">{{ errorMessage }}</span>
+            </div>
           </form>
+
         </div>
         <div>
           <p class="-h4 mb-8">
@@ -98,52 +96,54 @@ const form = ref({
   telephone: '',
   motif: '',
   message: '',
-  honey: '' // champ piège invisible 🐝
+  website: '' // honeypot anti-spam
 })
 
+const isSending = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
 
-const loading = ref(false)
-const success = ref(false)
-const error = ref(null)
+async function sendForm() {
+  successMessage.value = ''
+  errorMessage.value = ''
 
-const formStartTime = ref(0)
-
-onMounted(() => {
-  // mémorise l'heure d'ouverture du formulaire
-  formStartTime.value = Date.now()
-})
-
-const onSubmit = async () => {
-  loading.value = true
-  success.value = false
-  error.value = null
-
-  const elapsed = (Date.now() - formStartTime.value) / 1000
-
-  // 🐝 Vérif front avant même l'appel serveur
-  if (form.value.honey !== '' || elapsed < 2) {
-    error.value = 'Suspicion de spam détectée.'
-    loading.value = false
+  // Vérification des champs obligatoires
+  if (!form.value.nom || !form.value.email || !form.value.message) {
+    errorMessage.value = 'Veuillez remplir tous les champs obligatoires.'
     return
   }
 
+  // Protection anti-spam
+  if (form.value.website) return // si le honeypot est rempli, on ne fait rien
+
+  isSending.value = true
+
   try {
-    const response = await $fetch('/.netlify/functions/send-email', {
+    const response = await fetch('https://www.bonellaholloway.com/functions/contact.php', {
       method: 'POST',
-      body: form.value
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams(form.value).toString()
     })
 
-    if (response.success) {
-      success.value = true
+    const text = await response.text()
+
+    if (response.ok) {
+      successMessage.value = '✅ Message envoyé avec succès !'
+      isSending.value = false
+      // on vide les champs
+      Object.keys(form.value).forEach(k => form.value[k] = '')
     } else {
-      throw new Error(response.error || 'Erreur inconnue')
+      throw new Error(text)
     }
   } catch (err) {
-    error.value = err.message
-  } finally {
-    loading.value = false
+    console.error(err)
+    errorMessage.value = '❌ Une erreur est survenue, veuillez réessayer.'
+    isSending.value = false
   }
 }
+
 </script>
 
 <style>
