@@ -18,7 +18,7 @@
           <p class="-h4 mb-8">
             {{data.texte_formulaire}}
           </p>
-          <form class="grid sm:grid-cols-2 gap-2.5" @submit.prevent="sendForm">
+          <form class="sm:grid sm:grid-cols-2 gap-2.5" @submit.prevent="sendForm">
             <input class="sm:col-span-2" type="text" v-model="form.nom" placeholder="Nom et prénom *">
             <input class="sm:col-span-2" type="text" v-model="form.entreprise" placeholder="Votre entreprise">
             <input type="email" v-model="form.email" placeholder="Email *">

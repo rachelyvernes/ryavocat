@@ -1,9 +1,28 @@
 <?php
+$allowed_origins = [
+    'https://rachelyvernes.netlify.app',
+    'https://ryavocat.fr'
+];
+
+// Récupérer l’origine de la requête
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins)) {
+    header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+}
+
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
+// Répondre directement à la requête OPTIONS (préflight)
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
+
 // ---------------------------
 // CONFIGURATION
 // ---------------------------
-$to = "benjamin.mauroux@gmail.com"; 
-$subject = "📬 Nouveau message de contact";
+$to = ["benjamin.mauroux@gmail.com", "rachel.yvernes@avocat.fr"]; 
+$subject = "ryavocat.fr - Nouveau message de contact";
 
 // ---------------------------
 // PROTECTION ANTI-SPAM
