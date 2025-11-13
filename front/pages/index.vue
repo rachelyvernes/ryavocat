@@ -28,7 +28,7 @@
       </div>
       <div class="-h2 flex flex-wrap justify-center gap-3 py-4 md:py-8 border-b-2 border-bleu/60 border-dashed bg-blanc text-bleu lowercase">
         <div>
-          
+          Médiation
         </div>
         <div>
           ·
