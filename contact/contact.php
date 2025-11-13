@@ -1,6 +1,6 @@
 <?php
 $allowed_origins = [
-    'https://rachelyvernes.netlify.app',
+    'https://ryavocat.netlify.app',
     'https://ryavocat.fr'
 ];
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // ---------------------------
 // CONFIGURATION
 // ---------------------------
-$to = ["benjamin.mauroux@gmail.com", "rachel.yvernes@avocat.fr"]; 
+$to = "rachel.yvernes@avocat.fr"; 
 $subject = "ryavocat.fr - Nouveau message de contact";
 
 // ---------------------------
