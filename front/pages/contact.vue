@@ -119,7 +119,7 @@ async function sendForm() {
   isSending.value = true
 
   try {
-    const response = await fetch('https://www.bonellaholloway.com/functions/contact.php', {
+    const response = await fetch('http://dcuhnuh.cluster121.hosting.ovh.net/contact/contact.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

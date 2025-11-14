@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // ---------------------------
 // CONFIGURATION
 // ---------------------------
-$to = "rachel.yvernes@avocat.fr"; 
+$to = "benjamin.mauroux@gmail.com"; 
 $subject = "ryavocat.fr - Nouveau message de contact";
 
 // ---------------------------
