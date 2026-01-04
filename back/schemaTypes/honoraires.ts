@@ -39,6 +39,14 @@ export default defineType({
       type: 'link',
       group: 'page',
     }),
+
+    defineField({
+      title: 'Informations supplémentaires (rich)',
+      name: 'infoRich',
+      type: 'blockContent',
+      group: 'page',
+    }),
+    
     defineField({
       title: 'Informations supplémentaires',
       name: 'info',
