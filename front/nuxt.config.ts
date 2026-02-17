@@ -1,18 +1,18 @@
+import { defineNuxtConfig } from 'nuxt/config'
 import glsl from 'vite-plugin-glsl'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // 1. DIS MOI À NITRO QUE TU ES SUR NETLIFY
+  // Configuration Nitro pour Netlify
   nitro: {
-    preset: 'netlify', // Crucial pour que le build soit optimisé pour Netlify
+    preset: 'netlify',
     prerender: {
       autoSubfolderIndex: false
     }
   },
 
-  // 2. LE CORRECTIF POUR LE LOADER INFINI
+  // Correctif pour le chargement des pages (Loader)
   experimental: {
-    payloadExtraction: false // Évite les erreurs de chargement des fichiers JSON de données
+    payloadExtraction: false
   },
 
   devServer: {
@@ -51,7 +51,6 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       'tailwindcss/nesting': {},
-      'postcss-nested': {},
       tailwindcss: {},
       autoprefixer: {},
     },
@@ -59,7 +58,6 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [glsl()],
-    // 3. OPTIMISATION POUR LES LIBS LOURDES (GSAP/THREE)
     build: {
       commonjsOptions: {
         transformMixedEsModules: true,
