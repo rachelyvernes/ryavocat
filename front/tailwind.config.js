@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import flowbitePlugin from 'flowbite/plugin'
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -7,6 +9,7 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     screens: {
@@ -24,14 +27,15 @@ export default {
         'bleu': '#14254C',
         'blanc': '#F3F0E5',
       },
+      // fontFamily
     },
     fontFamily: {
       gothic: ['Gothic A1', 'sans-serif'],
       source: ['Source', 'serif'],
       alice: ['Alice', 'serif'],
-
     }
   },
-  plugins: [],
+  plugins: [
+    flowbitePlugin,
+  ],
 }
-
