@@ -13,10 +13,10 @@
       <Meta v-if="data.ogImage" property="twitter:image" :content="$urlFor(data.ogImage).width(1200).url()"/>
     </Head>
     <div v-if="data" class="content -sm">
-      <h1 class="text-[16px] uppercase">
+      <h1 class="md:text-[34px] text-black uppercase">
         {{data.title}}
       </h1>
-      <img class="w-full mt-8 object-cover object-center" :src="$urlFor(data.cover).width(1200).url()" :alt="data.title" loading="lazy">
+      <!-- <img class="w-full mt-8 object-cover object-center" :src="$urlFor(data.cover).width(1200).url()" :alt="data.title" loading="lazy"> -->
       <div class="block whitespace-pre-line mt-8">
         <SanityContent :blocks="data.contenu" />
       </div>

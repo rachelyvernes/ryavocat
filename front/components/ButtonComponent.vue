@@ -1,21 +1,30 @@
 <template>
-  <NuxtLink :to="link" class="btn -cta" :class="{'-light': light == 'true'}" :target="is_intern? '_self' : '_blank'">
-    {{ text }}
+  <NuxtLink
+    v-if="is_intern"
+    :to="link"
+    class="btn -cta"
+    :class="[{ '-light': light === 'true' }, $attrs.class]"
+  >
+    <slot>{{ text }}</slot>
   </NuxtLink>
+
+  <a
+    v-else
+    :href="link"
+    class="btn -cta"
+    :class="[{ '-light': light === 'true' }, $attrs.class]"
+    target="_blank"
+    rel="noopener"
+  >
+    <slot>{{ text }}</slot>
+  </a>
 </template>
+
 <script setup>
-const props = defineProps({
-  link: {
-    type: String,
-  },
-  text: {
-    type: String,
-  },
-  is_intern: {
-    type: Boolean,
-  },
-  light: {
-    type: String,
-  }
+defineProps({
+  link: String,
+  text: String,
+  is_intern: Boolean,
+  light: String
 })
 </script>
