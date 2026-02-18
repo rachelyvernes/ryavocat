@@ -13,7 +13,9 @@
               </a>
 
               <p class="text-base mt-11 mb-4 font-semibold">
-                <a :href="'tel:' + mainStore.siteOptions?.tel.replace(/\s+/g, '')">{{mainStore.siteOptions?.tel}}</a>
+<a :href="`tel:${(mainStore.siteOptions?.tel ?? '').replace(/\s+/g,'')}`">
+  {{ mainStore.siteOptions?.tel }}
+</a>
               </p>
               <p class="text-base mt-2 mb-2">
                 {{ mainStore.siteOptions?.adresse }}
