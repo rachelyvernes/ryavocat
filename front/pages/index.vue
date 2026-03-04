@@ -20,7 +20,7 @@
   <div class="mt-0 pt-12 pb-4 xl:pt-48 xl:pb-52 relative grid md:grid-cols-2 items-center py-[3vh] min-h-[calc(100dvh_-_84px)] md:min-h-[80vh] xl:min-h-[calc(100vh_-_114px)] overflow-x-hidden">
 
     <!-- Colonne image / gauche -->
-    <div class="flex justify-center xl:justify-start xl:pl-0 lg-ps-0 px-6 md:pr-6 lg:pr-32 xl:pr-48">
+    <div class="flex justify-center xl:justify-start xl:pl-4 lg-ps-0 px-6 md:pr-6 lg:pr-32 xl:pr-48">
      <!-- <img src="/img/1000053936-Picsart-AiImageEnhancer.jpg" alt="" width="1200" height="800" fetchpriority="high" loading="eager" decoding="async"/>-->
         <img height="800"
         class="max-w-full h-auto"
@@ -31,7 +31,7 @@
 
     <!-- Colonne texte / droite -->
     <div class="animate-slide-up z-10 text-center text-black md:text-left px-5 lg:pr-28 lg:pl-5 pt-16 pb-8 lg:pt-0 lg:pb-0">
-    <h1 style="font-family:'Pt Serif'!important;" class="leading-[1.1] text-[44px] md:text-[48px] lg:text-[58px] mb-8 text-xl text-[#1a1411]">Cabinet d'Avocat en <br class="hidden md:block" /> Droit Public des affaires</h1>
+    <h1 style="font-family:'Pt Serif'!important;" class="leading-[1.1] text-[40px] md:text-[48px] lg:text-[58px] mb-8 text-xl text-[#1a1411]">Cabinet d'Avocat en <br class="hidden md:block" /> Droit Public des affaires</h1>
 
       <p class="pb-10 lg:pb-6 text-xl"><strong>Rachel Yvernès</strong>, avocat et médiateur à Toulouse, vous accompagne de la genèse de vos projets à la résolution amiable ou contentieuse de vos différends.</p>
 
@@ -102,17 +102,17 @@
 <div class="bg-white py-20 mt-0 pt-24 md:pt-48 mt-0 md:mt-[-150px] lg:mt-[-100px]">
 <div class="content">
 
-      <h2 class="md:text-[38px] mb-16 text-black px-6 xl:px-0">
+      <h2 class="md:text-[38px] mb-16 text-black px-6 xl:px-4">
         À qui s’adresse mon <br/> accompagnement ? <span style="color:#efd3ba; padding-left:10px">——</span>
       </h2>
 
-<div class="services-box flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8 px-6 xl:px-0">
+<div class="services-box flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8 px-6 xl:px-4">
   
   <div class="service w-full">
     <div class="flip-box w-full h-[300px] sm:h-[360px] md:h-[400px]">
       <div class="flip-box-inner">
         
-        <div class="flip-box-front rounded-[40px]" style="background-image:url('/img/img8.webp')">
+        <div class="flip-box-front rounded-[40px]" style="background-image:url('/img/personnespubliques.webp')">
           <div class="flip-overlay"></div>
           <p class="text-xl sm:text-2xl px-4 text-center">
             Les personnes publiques
@@ -133,7 +133,7 @@
     <div class="flip-box w-full h-[300px] sm:h-[360px] md:h-[400px]">
       <div class="flip-box-inner">
 
-        <div class="flip-box-front rounded-[40px]" style="background-image:url('/img/img6.webp')">
+        <div class="flip-box-front rounded-[40px]" style="background-image:url('/img/personnesprivees.webp')">
           <div class="flip-overlay"></div>
           <p class="text-xl sm:text-2xl px-4 text-center">
             Les personnes privées
@@ -200,16 +200,16 @@
 
 <div id="carouselsection1" class="reveal bg-white py-20 mt-0 pt-24 md:pt-24 md:pb-24">
   <div class="content text-[#000]">
-    <div class="grid grid-cols-12 gap-12 px-0 xl:px-0">
+    <div class="grid grid-cols-12 gap-6 md:gap-12">
       <div class="col-span-12 md:col-span-5 pb-6 md:pb-12">
-        <h2 class="md:text-[34px]">
+        <h2 class="md:text-[34px] whitespace-normal break-words max-w-full">
           Une compétence complète <br /> au service de vos projets <span style="color:#efd3ba; padding-left:10px">——</span>
         </h2>
       </div>
       <div class="col-span-12 md:col-span-7"></div>
     </div>
 
-    <div id="desktop-carousel" class="hidden md:block reveal relative w-full" data-carousel="static">
+    <div id="desktop-carousel" class="xl:px-4 hidden md:block reveal relative w-full" data-carousel="static">
       <div class="relative w-full overflow-hidden rounded-base h-96 px-6 xl:px-0">
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item="active">
           <div class="grid grid-cols-4 gap-6 h-full">
@@ -318,7 +318,7 @@
 
 <div class="bg-white py-20 mt-0">
   <div class="content grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16 px-6 xl:px-0">
-  <div class="pl-0 md:pr-28 text-black">
+  <div class="xl:px-4 pl-0 md:pr-28 text-black">
     <p class="mb-6 text-xl text-[#1a1411] px-6 xl:px-0">— Faites appel au cabinet</p>
     <h2 class="md:text-[34px] mb-8 px-6 xl:px-0">
       Le cabinet est situé à Toulouse <br/> mais intervient partout en France

@@ -198,7 +198,7 @@ const isScrolled = ref(false)
 
 const showStickyStyle = computed(() => isScrolled.value)
 
-const darkLogoPages = ['/cabinet', '/competences', '/honoraires', '/publications']
+const darkLogoPages = ['/cabinet', '/competences', '/honoraires', '/publications', '/mentions-legales']
 
 const hasDarkBaseLogo = computed(() =>
   darkLogoPages.some(path => route.path === path || route.path.startsWith(path + '/'))

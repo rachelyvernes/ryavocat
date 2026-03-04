@@ -18,8 +18,8 @@
 
     <div class="py-4 mt-0">
       <template v-if="data">
-        <div class="content grid grid-cols-1 gap-16 md:grid-cols-2 items-center py-16 px-6 xl:px-0">
-          <ul class="pt-4">
+        <div class="content grid grid-cols-1 gap-16 md:grid-cols-2 items-center py-16 px-6 xl:px-4">
+          <ul class="pt-4 lg:px-4">
            <!-- <li
               v-for="(competence, index) in data.competences"
               :key="index"
@@ -60,7 +60,7 @@
 
           <div class="img-decor flex justify-center md:justify-start px-6 xl:px-0">
             <img
-              class="max-w-full h-full md:pl-16 relative z-10"
+              class="max-w-full h-full md:pl-16 relative z-10 lg:px-4"
               src="/img/img19.webp"
               alt=""
             />
