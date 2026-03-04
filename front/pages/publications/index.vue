@@ -1,5 +1,5 @@
 <template>
-  <div class="Publications page bg-white">
+  <div class="Publications page bg-white lg:px-4">
     <Head v-if="data">
       <Title v-if="data.title">{{ data.title }}</Title>
       <Meta v-if="data.title" name="og:title" :content="data.title"/>

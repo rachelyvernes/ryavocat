@@ -3,7 +3,7 @@
 
 
 
-<footer class="bg-neutral-primary-soft px-6 xl:px-0">
+<footer class="bg-neutral-primary-soft px-6 xl:px-4">
 
     <div class="content w-full max-w-screen-xl p-4 lg:p-0 py-6 lg:py-8">
         <div class="md:flex md:justify-between md:gap-12">
@@ -28,16 +28,16 @@
               </p>
 
           </div>
-          <div class="grid grid-cols-2 gap-y-8 gap-x-12 sm:grid-cols-3 sm:gap-y-6 sm:gap-x-16">
+          <div class="grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-3 sm:gap-y-6 sm:gap-x-16 pt-4 md:pt-0">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-heading uppercase">A propos</h2>
-                  <ul class="text-body font-medium space-y-4">
-                      <li class="mb-4 text-base">
+                  <h2 class="mb-2 md:mb-6 text-sm font-semibold text-heading uppercase">A propos</h2>
+                  <ul class="text-body font-medium space-y-1 md:space-y-4">
+                      <li class="md:mb-4 text-base">
                       <NuxtLink to="/cabinet" >
                         Cabinet
                       </NuxtLink>
                       </li>
-                      <li class="mb-4 text-base">
+                      <li class="md:mb-4 text-base">
                       <NuxtLink to="/competences" >
                         Compétences
                       </NuxtLink>
@@ -45,14 +45,14 @@
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-heading uppercase">En savoir plus</h2>
-                  <ul class="text-body font-medium space-y-4">
-                      <li class="mb-4 text-base">
+                  <h2 class="mb-2 md:mb-6 text-sm font-semibold text-heading uppercase">En savoir plus</h2>
+                  <ul class="text-body font-medium space-y-1 md:space-y-4">
+                      <li class="md:mb-4 text-base">
                       <NuxtLink to="/honoraires" >
                         Honoraires et devis
                       </NuxtLink>
                       </li>
-                      <li class="mb-4 text-base">
+                      <li class="md:mb-4 text-base">
                       <NuxtLink to="/publications" >
                         Publications
                       </NuxtLink>
@@ -60,14 +60,14 @@
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Contact</h2>
-                  <ul class="text-body font-medium space-y-4">
-                      <li class="mb-4 text-base">
+                  <h2 class="mb-2 md:mb-6 text-sm font-semibold text-heading uppercase">Contact</h2>
+                  <ul class="text-body font-medium space-y-1 md:space-y-4">
+                      <li class="md:mb-4 text-base">
                       <NuxtLink to="/contact" >
                         Me contacter
                       </NuxtLink>
                       </li>
-                      <li class="mb-4 text-base"><template v-if="mainStore.siteOptions">
+                      <li class="md:mb-4 text-base"><template v-if="mainStore.siteOptions">
                         <NuxtLink v-for="(link, index) in mainStore.siteOptions.liens_legaux" :to="link.lien" class=""  :target="link.is_intern? '_self' : '_blank'">{{link.title}}</NuxtLink>
                       </template></li>
                   </ul>
@@ -75,10 +75,10 @@
           </div>
       </div>
       <hr class="my-6 border-default sm:mx-auto lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
+      <div class="flex items-center justify-between">
           <span class="text-sm text-body sm:text-center">© {{ currentYear }} <a href="#" class="hover:underline">Ryavocat</a>
           </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <div class="flex md:mt-4 sm:justify-center sm:mt-0">
 <a href="#" class="text-body hover:text-heading ms-5">
   <svg
     class="w-5 h-5"

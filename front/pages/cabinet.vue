@@ -28,16 +28,16 @@
     <template v-if="data">
       <div class="bg-[#FEF8F5] py-20 mt-0">
         <div class="content md:mt-24 pt-4 pb-4 pl-0 md:pr-28 text-black">
-          <h1 class="pb-4 md:pb-1 text-[28px] md:text-[34px] text-[#1a1411] px-6 xl:px-0">
+          <h1 class="pb-4 md:pb-1 text-[28px] md:text-[34px] text-[#1a1411] px-6 xl:px-4">
             {{ data.catchphrase }}
             <span class="text-[#efd3ba] pl-3">——</span>
           </h1>
-          <p class="mb-12 text-lg px-6 xl:px-0">Un parcours au service du droit et du dialogue</p>
+          <p class="mb-12 text-lg px-6 xl:px-4">Un parcours au service du droit et du dialogue</p>
         </div>
 
-        <div class="content grid grid-cols-1 md:grid-cols-2 items-center py-16 px-6 xl:px-0">
+        <div class="bg-white content grid grid-cols-1 md:grid-cols-[60%_40%] items-start py-16 px-6 xl:px-0 xl:mx-auto xl:mx-4">
           <div
-            class="flex items-center pt-4 pb-4 md:pr-16 md:pl-16 text-black bg-white h-full w-full overflow-hidden shadow-[0_12px_40px_rgba(239,211,186,0.20)]"
+            class="flex items-center pt-4 pb-4 md:pr-16 md:pl-16 text-black bg-white h-full w-full overflow-hidden"
           >
             <div class="contentcabinet pb-6 xl:px-0">
               <SanityContent :blocks="data.text" />
@@ -70,7 +70,7 @@
 
       <div class="bg-white py-20 pt-24 md:pt-24 md:pb-24">
         <div class="content">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 xl:px-0">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 xl:px-4">
             <div class="max-w-lg lg:pr-12">
               <h2 class="md:text-[38px] text-black">
                 Les missions du cabinet
@@ -84,7 +84,7 @@
             <div></div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 xl:px-0">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 xl:px-4">
             <div class="rounded-[40px] overflow-hidden shadow-[0_12px_40px_rgba(239,211,186,0.20)]">
               <div class="h-[220px] sm:h-[260px] bg-cover bg-center" style="background-image:url('/img/img9.webp')"></div>
               <div class="p-12">
