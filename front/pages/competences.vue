@@ -58,7 +58,7 @@
             </li>
           </ul>
 
-          <div class="img-decor flex justify-center md:justify-start px-6 xl:px-0">
+          <div class="flex justify-center md:justify-start px-6 xl:px-0">
             <img
               class="max-w-full h-full md:pl-16 relative z-10 lg:px-4"
               src="/img/img19.webp"
