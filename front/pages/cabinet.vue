@@ -88,7 +88,7 @@
             <div class="rounded-[40px] overflow-hidden shadow-[0_12px_40px_rgba(239,211,186,0.20)]">
               <div class="h-[220px] sm:h-[260px] bg-cover bg-center" style="background-image:url('/img/médiation1.webp')"></div>
               <div class="p-12">
-                <h3 class="text-2xl sm:text-2xl text-black mb-3">Médiation</h3>
+                
                 <p class="leading-relaxed text-base sm:text-base lg:text-lg text-black/80">
                   Formée à la médiation, j'interviens à double titre. <br/> <br/> D'une part, en tant qu'avocat en médiation, je vous assiste dans vos procédures de médiations conventionnelles ou judiciaires. <br/> <br/> D'autre part, en tant que médiateur, je mène des procédures de médiation dans le respect des principes d'indépendance, de neutralité et de confidentialité.
                 </p>
@@ -98,7 +98,6 @@
             <div class="rounded-[40px] overflow-hidden bg-white shadow-[0_12px_40px_rgba(239,211,186,0.20)]">
               <div class="h-[220px] sm:h-[260px] bg-cover bg-center" style="background-image:url('/img/conseil1.webp')"></div>
               <div class="p-12">
-                <h3 class="text-2xl sm:text-2xl text-black mb-3">Conseil</h3>
                 <p class="leading-relaxed text-base sm:text-base lg:text-lg text-black/80">
                   Disposant d'une solide expertise en Droit Public des Affaires, je vous accompagne à toutes les phases de votre projet : définition des besoins, structuration juridique, rédaction des contrats, négociation, exécution et gestion des différends.
                 </p>
@@ -108,7 +107,6 @@
             <div class="rounded-[40px] overflow-hidden bg-white shadow-[0_12px_40px_rgba(239,211,186,0.20)]">
               <div class="h-[220px] sm:h-[260px] bg-cover bg-center" style="background-image:url('/img/contentieux1.webp')"></div>
               <div class="p-12">
-                <h3 class="text-2xl sm:text-2xl text-black mb-3">Contentieux</h3>
                 <p class="leading-relaxed text-base sm:text-base lg:text-lg text-black/80">
                   Je vous représente devant les juridictions administratives et judiciaires. <br/> <br/> Le Cabinet travaille en réseau avec plusieurs confrères de barreaux extérieurs qui peuvent, lorsque le dossier le nécessite, assurer la postulation auprès des juridictions compétentes.
                 </p>
