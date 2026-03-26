@@ -80,7 +80,7 @@
 
     <!-- panel -->
     <div
-      class="bg-[#102c45] border-[#102c45] relative w-full max-w-5xl max-h-[90vh] overflow-auto p-4 md:p-6 bg-neutral-primary-soft border border-default rounded-base shadow-sm"
+      class="rounded bg-[#102c45] border-[#102c45] relative w-full max-w-5xl max-h-[90vh] overflow-auto p-4 md:p-6 bg-neutral-primary-soft border border-default rounded-base shadow-sm"
       role="dialog"
       aria-modal="true"
       aria-label="Contact"
