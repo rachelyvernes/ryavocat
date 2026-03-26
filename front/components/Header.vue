@@ -16,7 +16,7 @@
     <NuxtLink to="/" class="no-underline">
       <img decoding="async" fetchpriority="high"
         :src="logoSrcDesktop"
-        class="w-[200px]"
+        class="w-[160px]"
         alt="Logo"
       />
     </NuxtLink>
@@ -206,13 +206,13 @@ const hasDarkBaseLogo = computed(() =>
 
 // LOGIQUE DESKTOP : Change selon le scroll et la page
 const logoSrcDesktop = computed(() => {
-  if (showStickyStyle.value) return '/img/rylogo.svg'
-  return hasDarkBaseLogo.value ? '/img/rylogo.svg' : '/img/rylogoblanc.svg'
+  if (showStickyStyle.value) return '/img/logory1.svg'
+  return hasDarkBaseLogo.value ? '/img/logory1.svg' : '/img/logory1blanc.svg'
 })
 
-// ✅ LOGIQUE MOBILE : Sombre par défaut, mais BLANC si le menu burger est ouvert
+// LOGIQUE MOBILE : Sombre par défaut, mais BLANC si le menu burger est ouvert
 const logoSrcMobile = computed(() => {
-  if (isMenuOpen.value) return '/img/rylogoblanc.svg' 
+  if (isMenuOpen.value) return '/img/logory1.svg' 
   return '/img/rylogo.svg'
 })
 
@@ -225,7 +225,7 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
   handleScroll()
 
-  // ✅ SOLUTION URGENTE : On attache la fonction à l'objet window
+  // SOLUTION: On attache la fonction à l'objet window
   // pour qu'elle soit accessible depuis index.vue ou d'autres pages.
   if (process.client) {
     window.openContact = openModal

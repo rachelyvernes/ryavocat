@@ -394,6 +394,18 @@ html {
   padding-right: 20px;
 }
 
+.contentcabinet p:has(em){
+  padding-bottom: 0!important;
+}
+
+.contentcabinet h2:last-of-type{
+  padding-top: 20px!important;
+}
+
+.contentcabinet p em{
+  font-style: normal;
+}
+
 .services-box
 {
   display: flex;
@@ -753,7 +765,7 @@ header ul a:not(.-btn):hover::after {
 }
 
  div[class*=" page-"]:not(.page-publications) footer{
-  background: #FEF8F5!important;
+  background: #102c45!important;
  }
 
 .bgcustom1{
