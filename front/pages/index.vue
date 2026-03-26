@@ -209,14 +209,14 @@
       <div class="col-span-12 md:col-span-7"></div>
     </div>
 
-    <div id="desktop-carousel" class="xl:px-4 hidden md:block reveal relative w-full" data-carousel="static">
+    <div id="desktop-carousel" class="xl:px-0 hidden md:block reveal relative w-full" data-carousel="static">
       <div class="relative w-full overflow-hidden rounded-base h-96 px-6 xl:px-0">
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item="active">
           <div class="grid grid-cols-4 gap-6 h-full">
             <NuxtLink to="/competences?open=0" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img1.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Commande publique</p></div></div></NuxtLink>
             <NuxtLink to="/competences?open=1" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img2.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Construction publique</p></div></div></NuxtLink>
-            <NuxtLink to="/competences?open=2" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img3.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Domanialité publique</p></div></div></NuxtLink>
-            <NuxtLink to="/competences?open=3" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img4.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></div></NuxtLink>
+            <NuxtLink to="/competences?open=2" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/domanialité publique2.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Domanialité publique</p></div></div></NuxtLink>
+            <NuxtLink to="/competences?open=3" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img3.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></div></NuxtLink>
           </div>
         </div>
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item>
@@ -319,7 +319,7 @@
 <div class="bg-white py-20 mt-0">
   <div class="content grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16 px-6 xl:px-0">
   <div class="xl:px-4 pl-0 md:pr-28 text-black">
-    <p class="mb-6 text-xl text-[#1a1411] px-6 xl:px-0">— Faites appel au cabinet</p>
+    <!-- <p class="mb-6 text-xl text-[#1a1411] px-6 xl:px-0">— Faites appel au cabinet</p> -->
     <h2 class="md:text-[34px] mb-8 px-6 xl:px-0">
       Le cabinet est situé à Toulouse <br/> mais intervient partout en France
     </h2>
