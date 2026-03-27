@@ -99,7 +99,7 @@
               <div class="h-[220px] sm:h-[260px] bg-cover bg-center" style="background-image:url('/img/conseil1.webp')"></div>
               <div class="p-12">
                 <p class="leading-relaxed text-base sm:text-base lg:text-lg text-black/80">
-                  Disposant d'une solide expertise en Droit Public des Affaires, je vous accompagne à toutes les phases de votre projet : définition des besoins, structuration juridique, rédaction des contrats, négociation, exécution et gestion des différends.
+                  Disposant d'une solide expertise en Droit Public des Affaires, je vous accompagne à toutes les phases de votre projet : <br/> <br/> Définition des besoins, structuration juridique, rédaction des contrats, négociation, exécution et gestion des différends.
                 </p>
               </div>
             </div>
