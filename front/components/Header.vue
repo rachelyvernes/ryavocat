@@ -212,8 +212,8 @@ const logoSrcDesktop = computed(() => {
 
 // LOGIQUE MOBILE : Sombre par défaut, mais BLANC si le menu burger est ouvert
 const logoSrcMobile = computed(() => {
-  if (isMenuOpen.value) return '/img/logory1.svg' 
-  return '/img/rylogo.svg'
+  if (isMenuOpen.value) return '/img/logory1blanc.svg' 
+  return '/img/logory1.svg'
 })
 
 const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value }
