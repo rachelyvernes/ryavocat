@@ -197,11 +197,10 @@
   </div>
 </div>
 
-
 <div id="carouselsection1" class="reveal bg-white py-20 mt-0 pt-24 md:pt-24 md:pb-24">
   <div class="content text-[#000]">
     <div class="grid grid-cols-12 gap-6 md:gap-12">
-      <div class="col-span-12 md:col-span-5 pb-6 md:pb-12">
+      <div class="col-span-12 px-6 xl:px-4 md:col-span-5 pb-6 md:pb-12">
         <h2 class="md:text-[34px] whitespace-normal break-words max-w-full">
           Une compétence complète <br /> au service de vos projets <span style="color:#efd3ba; padding-left:10px">——</span>
         </h2>
@@ -209,7 +208,7 @@
       <div class="col-span-12 md:col-span-7"></div>
     </div>
 
-    <div id="desktop-carousel" class="xl:px-0 hidden md:block reveal relative w-full" data-carousel="static">
+    <div id="desktop-carousel" class="px-6 xl:px-4 hidden md:block reveal relative w-full" data-carousel="static">
       <div class="relative w-full overflow-hidden rounded-base h-96 px-6 xl:px-0">
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item="active">
           <div class="grid grid-cols-4 gap-6 h-full">
@@ -224,20 +223,20 @@
             <NuxtLink to="/competences?open=4" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/bg3.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Collectivités territoriales</p></div></div></NuxtLink>
             <NuxtLink to="/competences?open=0" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img1.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Commande publique</p></div></div></NuxtLink>
             <NuxtLink to="/competences?open=1" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img2.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Construction publique</p></div></div></NuxtLink>
-            <NuxtLink to="/competences?open=2" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img4.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></div></NuxtLink>
+            <NuxtLink to="/competences?open=2" class="block h-full"><div class="relative w-full h-full overflow-hidden"><img src="/img/img3.webp" class="rounded-[40px] absolute inset-0 w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></div></NuxtLink>
           </div>
         </div>
       </div>
-      <button type="button" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 px-4 cursor-pointer" data-carousel-prev><span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md"><svg class="w-5 h-5 text-[#1a1411]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg></span></button>
-      <button type="button" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 px-4 cursor-pointer" data-carousel-next><span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md"><svg class="w-5 h-5 text-[#1a1411]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg></span></button>
+      <button type="button" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 px-5 cursor-pointer" data-carousel-prev><span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md"><svg class="w-5 h-5 text-[#1a1411]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg></span></button>
+      <button type="button" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 px-5 cursor-pointer" data-carousel-next><span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md"><svg class="w-5 h-5 text-[#1a1411]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg></span></button>
     </div>
 
     <div id="mobile-carousel" class="md:hidden reveal relative w-full" data-carousel="static">
       <div class="relative w-full overflow-hidden rounded-base h-96 px-6">
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item="active"><NuxtLink to="/competences?open=0" class="block h-full w-full relative"><img src="/img/img1.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Commande publique</p></div></NuxtLink></div>
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=1" class="block h-full w-full relative"><img src="/img/img2.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Construction publique</p></div></NuxtLink></div>
-        <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=2" class="block h-full w-full relative"><img src="/img/img3.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Domanialité publique</p></div></NuxtLink></div>
-        <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=3" class="block h-full w-full relative"><img src="/img/img4.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></NuxtLink></div>
+        <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=2" class="block h-full w-full relative"><img src="/img/domanialitepublique2.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Domanialité publique</p></div></NuxtLink></div>
+        <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=3" class="block h-full w-full relative"><img src="/img/img3.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Droit administratif</p></div></NuxtLink></div>
         <div class="hidden duration-700 ease-in-out absolute inset-0" data-carousel-item><NuxtLink to="/competences?open=4" class="block h-full w-full relative"><img src="/img/bg3.webp" class="rounded-[40px] w-full h-full object-cover" alt=""><div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-8"><p class="textcarousel text-white">Collectivités territoriales</p></div></NuxtLink></div>
       </div>
       <button type="button" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 px-2" data-carousel-prev><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md"><svg class="w-4 h-4 text-[#1a1411]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg></span></button>
