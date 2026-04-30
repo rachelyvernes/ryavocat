@@ -657,7 +657,7 @@ html {
 
 @media (min-width: 1280px) {
   .decorationbg::before {
-    width: 28%;
+    width: 25%;
   }
 }
 
