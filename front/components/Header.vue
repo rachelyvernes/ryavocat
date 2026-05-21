@@ -149,12 +149,12 @@
 
     <!-- COLONNE DROITE : TES AUTRES CHOSES -->
     <aside class="space-y-4">
-      <p class="-h4 pb-4 text-white">Ecrivez moi ou prenez rendez-vous directement ici :</p>
+      <p class="-h4 pb-4 text-white">Ecrivez-moi ou prenez rendez-vous directement ici :</p>
 
       <div class="p-4 rounded-base border border-default bg-neutral-primary-soft bg-white text-black text-center">
         <a class="" href="https://consultation.avocat.fr/consultation-cabinet/forms.php?hashid=aff24ef564263f8d1d13" target="_blank" rel="noreferrer">
         <p class="font-medium mb-2 text-black flex items-center justify-center gap-2"><img src="/img/location-dotblack.svg" alt="" class="w-6 h-6 shrink-0"> Rendez-vous au cabinet</p>
-          <p class="text-sm text-black">1h 150 € HT</p>
+          <p class="text-sm text-black">30min 90 € HT</p>
         </a>
       </div>
 
