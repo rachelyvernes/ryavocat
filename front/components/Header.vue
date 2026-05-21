@@ -159,7 +159,7 @@
       </div>
 
       <div class="p-4 rounded-base border border-default bg-neutral-primary-soft bg-transparent text-black text-center">
-      <a class="" href="https://consultation.avocat.fr/consultation-video/forms.php?hashid=b2374ea43e86b39d23c3" target="_blank" rel="noreferrer">
+      <a class="" href="https://consultation.avocat.fr/consultation-video/forms.php?hashid=fcc763a066b97f1efbe7" target="_blank" rel="noreferrer">
         <p class="font-medium mb-2 text-white flex items-center justify-center gap-2"><img src="/img/calendarwhite.svg" alt="" class="w-6 h-6 shrink-0"> Rendez-vous en visioconférence</p>
         <p class="text-sm text-white">30min - 90 € HT</p>
       </a>
