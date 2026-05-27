@@ -31,9 +31,9 @@
 
     <!-- Colonne texte / droite -->
     <div class="animate-slide-up z-10 text-center text-black md:text-left px-5 lg:pr-28 lg:pl-5 pt-16 pb-8 lg:pt-0 lg:pb-0">
-    <h1 style="font-family:'Pt Serif'!important;" class="leading-[1.1] text-[40px] md:text-[48px] lg:text-[58px] mb-8 text-xl text-[#1a1411]">Cabinet d'Avocat en <br class="hidden md:block" /> Droit Public des affaires</h1>
+    <h1 style="font-family:'Pt Serif'!important;" class="leading-[1.1] text-[40px] md:text-[48px] lg:text-[58px] mb-8 text-xl text-[#1a1411]">Cabinet d'Avocat en <br class="hidden md:block" /> droit public des affaires</h1>
 
-      <p class="pb-10 lg:pb-6 text-xl"><strong>Rachel Yvernès</strong>, avocat et médiateur à Toulouse, vous accompagne de la genèse de vos projets à la résolution amiable ou contentieuse de vos différends.</p>
+      <p class="pb-10 lg:pb-6 text-xl"><strong>Rachel Yvernès</strong>, avocat et médiateur à Toulouse, vous accompagne de la genèse de vos projets à la résolution de vos différends.</p>
 
 
       <h2 v-if="data.catchphrase" class="mb-10 md:mb-[3vh] text-[20px] md:text-[20px] text-[#B8655E] leading-7">

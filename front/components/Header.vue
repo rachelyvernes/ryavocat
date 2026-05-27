@@ -147,7 +147,7 @@
       </form>
     </div>
 
-    <!-- COLONNE DROITE : TES AUTRES CHOSES -->
+    <!-- COLONNE DROITE -->
 <aside v-if="data" class="space-y-4">
   <p class="-h4 pb-4 text-white">
     {{ data.texte_rdv }}
