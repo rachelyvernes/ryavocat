@@ -147,25 +147,50 @@
       </form>
     </div>
 
-    <!-- COLONNE DROITE : TES AUTRES CHOSES -->
-    <aside class="space-y-4">
-      <p class="-h4 pb-4 text-white">Ecrivez-moi ou prenez rendez-vous directement ici :</p>
+    <!-- COLONNE DROITE -->
+<aside v-if="data" class="space-y-4">
+  <p class="-h4 pb-4 text-white">
+    {{ data.texte_rdv }}
+  </p>
 
-      <div class="p-4 rounded-base border border-default bg-neutral-primary-soft bg-white text-black text-center">
-        <a class="" href="https://consultation.avocat.fr/consultation-cabinet/forms.php?hashid=aff24ef564263f8d1d13" target="_blank" rel="noreferrer">
-        <p class="font-medium mb-2 text-black flex items-center justify-center gap-2"><img src="/img/location-dotblack.svg" alt="" class="w-6 h-6 shrink-0"> Rendez-vous au cabinet</p>
-          <p class="text-sm text-black">30min 90 € HT</p>
-        </a>
-      </div>
+  <div
+    v-for="(bloc, index) in data.blocs"
+    :key="index"
+    class="p-4 rounded-base border border-default text-center relative overflow-hidden"
+    :class="index === 0
+      ? 'bg-white text-black'
+      : 'bg-transparent text-white'"
+  >
 
-      <div class="p-4 rounded-base border border-default bg-neutral-primary-soft bg-transparent text-black text-center">
-      <a class="" href="https://consultation.avocat.fr/consultation-video/forms.php?hashid=fcc763a066b97f1efbe7" target="_blank" rel="noreferrer">
-        <p class="font-medium mb-2 text-white flex items-center justify-center gap-2"><img src="/img/calendarwhite.svg" alt="" class="w-6 h-6 shrink-0"> Rendez-vous en visioconférence</p>
-        <p class="text-sm text-white">30min - 90 € HT</p>
-      </a>
-      </div>
-              <p class="pt-4 text-base text-white">Cette somme sera déduite des honoraires si le rendez-vous est suivi d’une ouverture du dossier au cabinet.</p>
-    </aside>
+    <a
+      class="absolute inset-0 z-10"
+      :href="bloc.lien"
+      target="_blank"
+      rel="noreferrer"
+    ></a>
+
+    <p class="font-medium mb-2 flex items-center justify-center gap-2">
+      <img
+        :src="index === 0
+          ? '/img/location-dotblack.svg'
+          : '/img/calendarwhite.svg'"
+        alt=""
+        class="w-6 h-6 shrink-0"
+      >
+
+      {{ bloc.title }}
+    </p>
+
+    <p class="text-sm">
+      {{ bloc.tarif }}
+    </p>
+
+  </div>
+
+  <p class="pt-4 text-base text-white">
+    {{ data.texte_rdv_bis }}
+  </p>
+</aside>
 
   </div>
 </div>
@@ -189,6 +214,12 @@
 </template>
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+
+const query = groq`*[_type == "contact"] | order(_updatedAt desc)[0]`
+
+const data = await useSanityData({
+  query: query,
+})
 
 // ✅ Nuxt : useRoute est auto-importé
 const route = useRoute()
