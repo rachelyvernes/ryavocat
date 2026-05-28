@@ -237,13 +237,13 @@ const hasDarkBaseLogo = computed(() =>
 
 // LOGIQUE DESKTOP : Change selon le scroll et la page
 const logoSrcDesktop = computed(() => {
-  if (showStickyStyle.value) return '/img/logory1.svg'
-  return hasDarkBaseLogo.value ? '/img/logory1.svg' : '/img/logory1blanc.svg'
+  if (showStickyStyle.value) return '/img/logoryavocatv2.svg'
+  return hasDarkBaseLogo.value ? '/img/logoryavocatv2.svg' : '/img/logoryavocatv2blanc.svg'
 })
 
 // LOGIQUE MOBILE : Sombre par défaut, mais BLANC si le menu burger est ouvert
 const logoSrcMobile = computed(() => {
-  if (isMenuOpen.value) return '/img/logory1blanc.svg' 
+  if (isMenuOpen.value) return '/img/logoryavocatv2blanc.svg' 
   return '/img/logory1.svg'
 })
 
