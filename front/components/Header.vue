@@ -5,7 +5,7 @@
 <NuxtLink class="lg:hidden" to="/" >
       <img decoding="async" fetchpriority="high"
         :src="logoSrcMobile" 
-        class="w-[200px]"
+        class="w-[120px] sm:w-[200px]"
         alt="Logo"
       />
     </NuxtLink>
@@ -16,7 +16,7 @@
     <NuxtLink to="/" class="no-underline">
       <img decoding="async" fetchpriority="high"
         :src="logoSrcDesktop"
-        class="w-[160px]"
+        class="w-[120px] sm:w-[160px]"
         alt="Logo"
       />
     </NuxtLink>
@@ -244,7 +244,7 @@ const logoSrcDesktop = computed(() => {
 // LOGIQUE MOBILE : Sombre par défaut, mais BLANC si le menu burger est ouvert
 const logoSrcMobile = computed(() => {
   if (isMenuOpen.value) return '/img/logoryavocatv2blanc.svg' 
-  return '/img/logory1.svg'
+  return '/img/logoryavocatv2.svg'
 })
 
 const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value }
