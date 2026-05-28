@@ -62,11 +62,15 @@
               <div>
                   <h2 class="mb-2 md:mb-6 text-sm font-semibold text-heading text-white uppercase">Contact</h2>
                   <ul class="text-body font-medium space-y-1 md:space-y-4">
-                      <li class="md:mb-4 text-white text-base">
-                      <NuxtLink to="/contact" >
-                        Me contacter
-                      </NuxtLink>
-                      </li>
+                   <li class="md:mb-4 text-white text-base">
+  <a
+    href="#"
+    @click.prevent="triggerContact"
+    class="cursor-pointer"
+  >
+    Me contacter
+  </a>
+</li>
                       <li class="md:mb-4 text-white text-base"><template v-if="mainStore.siteOptions">
                         <NuxtLink v-for="(link, index) in mainStore.siteOptions.liens_legaux" :to="link.lien" class=""  :target="link.is_intern? '_self' : '_blank'">{{link.title}}</NuxtLink>
                       </template></li>
@@ -101,5 +105,13 @@
 </template>
 <script setup>
 const mainStore = useMainStore()
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
+
+const triggerContact = () => {
+  if (process.client && window.openContact) {
+    window.openContact()
+  } else {
+    setTimeout(() => window.openContact?.(), 100)
+  }
+}
 </script>
