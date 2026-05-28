@@ -9,7 +9,7 @@
         <div class="md:flex md:justify-between md:gap-12">
           <div class="mb-6 md:mb-0 md:w-4/12 lg:w-3/12">
               <a href="#" class="flex items-center">
-                  <img src="/img/logory1blanc.svg" class="h-11 me-3" alt="Logo" />
+                  <img src="/img/logoryavocatv2blanc.svg" class="h-14 me-3" alt="Logo" />
               </a>
 
               <p class="text-base mt-11 mb-4 font-semibold">
